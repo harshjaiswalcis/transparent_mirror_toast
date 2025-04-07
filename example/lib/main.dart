@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:transparent_mirror_toast/transparent_mirror_toast.dart';
+import 'package:transparent_toast_mirror/transparent_toast_mirror.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Transparent Mirror Toast Demo',
+      title: 'Transparent Toast Mirror Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: const MyHomePage(),
@@ -28,7 +28,8 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Transparent Mirror Toast Demo'),
+        title: const Text('Transparent Toast Mirror Demo'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: Center(
         child: Column(
@@ -36,35 +37,37 @@ class MyHomePage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                TransparentMirrorToast.show(
+                TransparentToastMirror.show(
                   context,
-                  'This is a bottom toast!',
-                  position: ToastPosition.bottom,
+                  'Simple Toast Message',
                 );
               },
-              child: const Text('Show Bottom Toast'),
+              child: const Text('Show Simple Toast'),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                TransparentMirrorToast.show(
+                TransparentToastMirror.show(
                   context,
-                  'This is a center toast!',
-                  position: ToastPosition.center,
+                  'Center Position Toast',
+                  position: GlassToastPosition.center,
+                  duration: const Duration(seconds: 3),
                 );
               },
               child: const Text('Show Center Toast'),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: () {
-                TransparentMirrorToast.show(
+                TransparentToastMirror.show(
                   context,
-                  'This is a top toast!',
-                  position: ToastPosition.top,
+                  'Custom Styled Toast',
+                  position: GlassToastPosition.top,
+                  backgroundColor: Colors.blue,
+                  backgroundOpacity: 0.7,
                 );
               },
-              child: const Text('Show Top Toast'),
+              child: const Text('Show Custom Toast'),
             ),
           ],
         ),

@@ -152,7 +152,7 @@
       "languageVersion": "3.2"
     },
     {
-      "name": "transparent_mirror_toast",
+      "name": "transparent_toast_mirror",
       "rootUri": "../../",
       "packageUri": "lib/",
       "languageVersion": "2.19"
@@ -170,13 +170,13 @@
       "languageVersion": "3.3"
     },
     {
-      "name": "transparent_mirror_toast_example",
+      "name": "transparent_toast_mirror_example",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2025-04-07T06:49:25.115303Z",
+  "generated": "2025-04-07T08:02:46.298919Z",
   "generator": "pub",
   "generatorVersion": "3.5.0",
   "flutterRoot": "file:///windows/flutter_sdk/flutter",

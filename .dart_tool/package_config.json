@@ -164,13 +164,13 @@
       "languageVersion": "3.3"
     },
     {
-      "name": "transparent_mirror_toast",
+      "name": "glass_toast_flutter",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "3.4"
     }
   ],
-  "generated": "2025-04-07T06:52:10.621535Z",
+  "generated": "2025-04-07T10:33:21.112194Z",
   "generator": "pub",
   "generatorVersion": "3.5.0",
   "flutterRoot": "file:///windows/flutter_sdk/flutter",

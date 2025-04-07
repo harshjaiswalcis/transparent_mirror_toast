@@ -1,5 +1,5 @@
-name: transparent_mirror_toast_example
-description: Example app for transparent_mirror_toast package
+name: transparent_toast_mirror_example
+description: Example app for transparent_toast_mirror package
 publish_to: "none"
 version: 1.0.0+1
 
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  transparent_mirror_toast:
+  transparent_toast_mirror:
     path: ../
 
 dev_dependencies:

@@ -1,51 +1,48 @@
-# Transparent Mirror Toast
+# Transparent Toast Mirror
 
-A customizable Flutter toast widget with a sleek transparent and mirror-glass effect. Display toast messages with beautiful blur and fade animations anywhere in your app.
+A Flutter package for displaying beautiful glass-morphism toast notifications with blur effect and smooth animations.
 
 ## Features
 
-- 🎨 Transparent glass-like mirror effect
-- ✨ Fade in/out animation
-- 📱 Overlay-based toast display
-- 🚀 Easy to use with a single function
-- ⚙️ Supports custom duration and position
-- 🎯 Multiple position options (top, center, bottom)
+- 🎨 Beautiful glass-morphism effect
+- 🌟 Blur effect for modern look
+- ⚡ Smooth fade animations
+- 📱 Multiple position options (top, center, bottom)
+- 🎯 Customizable appearance
+- 🚀 Lightweight and easy to use
 
 ## Installation
 
-Add this to your `pubspec.yaml`:
+Add the following to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  transparent_mirror_toast: ^1.0.0
+  transparent_toast_mirror: ^0.0.1
+```
+
+Then run:
+
+```bash
+flutter pub get
 ```
 
 ## Usage
 
 ```dart
-import 'package:transparent_mirror_toast/transparent_mirror_toast.dart';
+import 'package:transparent_toast_mirror/transparent_toast_mirror.dart';
 
-// Show a toast at the bottom (default position)
-TransparentMirrorToast.show(context, 'Hello World!');
-
-// Show a toast at the center
-TransparentMirrorToast.show(
+// Show a simple toast
+TransparentToastMirror.show(
   context,
-  'Hello World!',
-  position: ToastPosition.center,
+  'Hello, World!',
 );
 
-// Show a toast with custom duration
-TransparentMirrorToast.show(
+// Show a toast with custom options
+TransparentToastMirror.show(
   context,
-  'Hello World!',
+  'Custom Toast',
+  position: GlassToastPosition.center,
   duration: Duration(seconds: 3),
-);
-
-// Show a toast with custom background color and opacity
-TransparentMirrorToast.show(
-  context,
-  'Hello World!',
   backgroundColor: Colors.blue,
   backgroundOpacity: 0.7,
 );
@@ -53,18 +50,24 @@ TransparentMirrorToast.show(
 
 ## Parameters
 
-| Parameter         | Type          | Default      | Description                                   |
-| ----------------- | ------------- | ------------ | --------------------------------------------- |
-| context           | BuildContext  | required     | The build context                             |
-| message           | String        | required     | The message to display                        |
-| duration          | Duration      | 2 seconds    | How long the toast should be visible          |
-| position          | ToastPosition | bottom       | Where to show the toast (top, center, bottom) |
-| backgroundColor   | Color         | Colors.black | The background color of the toast             |
-| backgroundOpacity | double        | 0.5          | The opacity of the background (0.0 to 1.0)    |
+| Parameter         | Type               | Default      | Description                            |
+| ----------------- | ------------------ | ------------ | -------------------------------------- |
+| context           | BuildContext       | required     | The BuildContext of the current widget |
+| message           | String             | required     | The text to display in the toast       |
+| duration          | Duration           | 2 seconds    | How long the toast should be visible   |
+| position          | GlassToastPosition | bottom       | Where the toast should appear          |
+| backgroundColor   | Color              | Colors.black | The color of the toast background      |
+| backgroundOpacity | double             | 0.5          | The opacity of the background          |
 
-## Example
+## GlassToastPosition
 
-Check out the [example](example) directory for a complete example app.
+- `top`: Shows the toast at the top of the screen
+- `center`: Shows the toast in the center of the screen
+- `bottom`: Shows the toast at the bottom of the screen
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 

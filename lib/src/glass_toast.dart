@@ -1,14 +1,13 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter_blurhash/flutter_blurhash.dart';
 
-enum ToastPosition {
+enum GlassToastPosition {
   top,
   center,
   bottom,
 }
 
-class TransparentMirrorToast {
+class GlassToast {
   static OverlayEntry? _overlayEntry;
   static bool _isVisible = false;
 
@@ -16,7 +15,7 @@ class TransparentMirrorToast {
     BuildContext context,
     String message, {
     Duration duration = const Duration(seconds: 2),
-    ToastPosition position = ToastPosition.bottom,
+    GlassToastPosition position = GlassToastPosition.bottom,
     Color backgroundColor = Colors.black,
     double backgroundOpacity = 0.5,
   }) {
@@ -25,7 +24,7 @@ class TransparentMirrorToast {
     _isVisible = true;
     final overlay = Overlay.of(context);
     _overlayEntry = OverlayEntry(
-      builder: (context) => _ToastWidget(
+      builder: (context) => _GlassToastWidget(
         message: message,
         position: position,
         backgroundColor: backgroundColor,
@@ -47,14 +46,14 @@ class TransparentMirrorToast {
   }
 }
 
-class _ToastWidget extends StatefulWidget {
+class _GlassToastWidget extends StatefulWidget {
   final String message;
-  final ToastPosition position;
+  final GlassToastPosition position;
   final Color backgroundColor;
   final double backgroundOpacity;
   final VoidCallback onDismiss;
 
-  const _ToastWidget({
+  const _GlassToastWidget({
     required this.message,
     required this.position,
     required this.backgroundColor,
@@ -63,10 +62,10 @@ class _ToastWidget extends StatefulWidget {
   });
 
   @override
-  State<_ToastWidget> createState() => _ToastWidgetState();
+  State<_GlassToastWidget> createState() => _GlassToastWidgetState();
 }
 
-class _ToastWidgetState extends State<_ToastWidget>
+class _GlassToastWidgetState extends State<_GlassToastWidget>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation<double> _animation;
@@ -141,11 +140,11 @@ class _ToastWidgetState extends State<_ToastWidget>
   double _getTopPosition() {
     final size = MediaQuery.of(context).size;
     switch (widget.position) {
-      case ToastPosition.top:
+      case GlassToastPosition.top:
         return size.height * 0.1;
-      case ToastPosition.center:
+      case GlassToastPosition.center:
         return size.height * 0.4;
-      case ToastPosition.bottom:
+      case GlassToastPosition.bottom:
         return size.height * 0.8;
     }
   }

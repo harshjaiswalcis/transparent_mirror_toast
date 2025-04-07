@@ -1,11 +1,11 @@
-name: transparent_mirror_toast
-description: A customizable Flutter toast widget with a sleek transparent and mirror-glass effect.
-version: 1.0.0
-homepage: https://github.com/yourusername/transparent_mirror_toast
-repository: https://github.com/yourusername/transparent_mirror_toast
+name: glass_toast_flutter
+description: A Flutter package for displaying beautiful glass-morphism toast notifications with blur effect and smooth animations.
+version: 0.0.1
+repository: https://github.com/harshjaiswalcis/glass_toast_flutter
+homepage: https://github.com/harshjaiswalcis/glass_toast_flutter
 
 environment:
-  sdk: ">=2.19.0 <4.0.0"
+  sdk: ">=3.4.0 <4.0.0"
   flutter: ">=3.0.0"
 
 dependencies:

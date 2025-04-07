@@ -94,11 +94,11 @@ vm_service
 3.3
 file:///home/cis/.pub-cache/hosted/pub.dev/vm_service-14.2.4/
 file:///home/cis/.pub-cache/hosted/pub.dev/vm_service-14.2.4/lib/
-transparent_mirror_toast
+transparent_toast_mirror
 2.19
 file:///windows/Documents/flutter%20projects/R&D/package/
 file:///windows/Documents/flutter%20projects/R&D/package/lib/
-transparent_mirror_toast_example
+transparent_toast_mirror_example
 2.19
 file:///windows/Documents/flutter%20projects/R&D/package/example/
 file:///windows/Documents/flutter%20projects/R&D/package/example/lib/
